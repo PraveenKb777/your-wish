@@ -1,0 +1,22 @@
+.ButtonContainer {
+    background-color: rgb(84, 242, 166);
+    width: 100%;
+    border-radius: 7px;
+    opacity: 1;
+    color: black;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.ButtonText {
+    width: 80%;
+}
+
+.Buttonsvg {
+    width: 20%;
+    transition: transform 0.3s ease;
+}
+
+.ButtonContainer:hover .Buttonsvg {
+    transform: translateX(5px);
+}
