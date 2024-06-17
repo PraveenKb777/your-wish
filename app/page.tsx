@@ -1,6 +1,9 @@
 import MariqueeCarousal from "@/components/MariqueeCarousal/MariqueeCarousal";
 import HoverCard from "@/components/HoverCard/HoverCard";
 import Image from "next/image";
+import Button from "@/components/Button/Button";
+import GradientText from "@/components/GradientText/GradientText";
+import { StackedCards } from "@/components/StackedCards/StackedCards";
 
 interface IImgList {
   url: string;
@@ -17,17 +20,17 @@ const imgList: Array<IImgList> = [
 export default function Home() {
   return (
     <>
-      <div
-        style={{ height: "100vh", display: "flex", justifyContent: "flex-end" }}
+      <StackedCards list={[0, 1, 2, 3, 4]} />
+      <GradientText
+        colors={["#eee", "#333"]}
+        element="h1"
+        style={{ fontSize: 100 }}
       >
-        {/* <MariqueeCarousal
-          list={imgList}
-          marqueeDirection="vertical"
-          imageHeight={300}
-          imageWidth={300}
-          imageClassName="hero_section_carousal"
-          duration={30}
-        /> */}
+        Hello world
+      </GradientText>
+      <Button />
+      <HoverCard />
+      <div style={{ display: "flex", justifyContent: "flex-end" }}>
         <MariqueeCarousal
           list={imgList}
           marqueeDirection="horizontal"
