@@ -23,7 +23,7 @@ export default function Home() {
       <StackedCards list={[0, 1, 2, 3, 4]} />
       <GradientText
         colors={["#eee", "#333"]}
-        element="h1"
+        element="p"
         style={{ fontSize: 100 }}
       >
         Hello world

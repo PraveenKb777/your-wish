@@ -1,14 +1,14 @@
 @keyframes stackForward {
   0% {
-    transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0) rotate(0deg);
   }
   50% {
-    transform: translateX(70px) translateY(40px);
+    transform: translateX(70px) translateY(40px) rotate(5deg);
   }
   75% {
-    transform: translateX(70px) translateY(40px);
+    transform: translateX(70px) translateY(40px) rotate(5deg);
   }
   100% {
-    transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0) rotate(0deg);
   }
 }

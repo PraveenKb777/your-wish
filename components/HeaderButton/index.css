@@ -1,14 +1,15 @@
 .header-button-content {
   overflow: hidden;
   animation: open-header-animation 1s;
+  text-overflow: ellipsis;
 }
 
 @keyframes open-header-animation {
   0% {
-    max-width: 1px;
+    opacity: 0;
   }
 
   100% {
-    max-width: 100px;
+    opacity: 1;
   }
 }
