@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import { HeaderButton } from "../HeaderButton/HeaderButton";
 
-export default function Header() {
+export const Header = () => {
   return (
-    <div>Header</div>
-  )
-}
+    <div className="text-white">
+      <HeaderButton number={1} lable="COurse" />
+    </div>
+  );
+};

@@ -1,0 +1,14 @@
+.header-button-content {
+  overflow: hidden;
+  animation: open-header-animation 1s;
+}
+
+@keyframes open-header-animation {
+  0% {
+    max-width: 1px;
+  }
+
+  100% {
+    max-width: 100px;
+  }
+}
