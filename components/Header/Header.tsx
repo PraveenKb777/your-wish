@@ -3,7 +3,7 @@ import { HeaderButton } from "../HeaderButton/HeaderButton";
 
 export const Header = () => {
   return (
-    <nav className="text-white sticky w-[100vw] top-0 left-0 bg-[#0b0b0b] pt-3  z-50">
+    <nav className="text-white sticky w-[100vw] top-0 left-0 bg-[#0b0b0b] pt-3  z-50 h-[78px]">
       <div className="flex justify-center w-full">
         <div className="flex justify-between text-sm mb-4">
           <HeaderButton number={1} lable="Course" isSelected />

@@ -1,0 +1,10 @@
+@keyframes cometAnimation {
+  0% {
+    opacity: 1;
+    transform: rotate(200deg) translateX(1000px);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(200deg) translateX(-1000px);
+  }
+}

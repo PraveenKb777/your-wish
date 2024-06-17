@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header/Header";
+import Comet from "@/components/Comet/Comet";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,22 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <div
-          className="line"
-          style={{
-            opacity: 1,
-            transform:
-              "perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(25deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px)",
-          }}
-        />
-        <div
-          className="line line2"
-          style={{
-            opacity: 1,
-            transform:
-              "perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(15deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px)",
-          }}
-        />
+        <div className="line" />
+        <div className="line line2" />
+        <Comet />
         <div className="w-[1100px]">{children}</div>
       </body>
     </html>

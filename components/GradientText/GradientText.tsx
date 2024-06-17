@@ -16,16 +16,16 @@ interface GradientCSSProperties extends CSSProperties {}
 const GradientText: FunctionComponent<IGradientText> = ({
   children,
   element,
-  colors,
+  colors = ["#eee 73%", "#333 100%"],
   gradientDirection,
   style,
   className,
 }) => {
   const Tag = element || "div";
-  const styleClass = `${className ? "" : className} grdient-text`;
+  const styleClass = `${className ? className : ""} grdient-text`;
   const gradient =
     `${gradientDirection ? gradientDirection : 70}deg,` + colors?.join(",");
-  console.log(">>colors", gradient);
+
   return (
     <Tag
       style={

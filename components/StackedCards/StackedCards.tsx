@@ -111,6 +111,7 @@ export const StackedCards: React.FC<{ list: any[] }> = ({ list }) => {
         >
           Left
         </h1>
+        <a href="#home-hero-section">i love u</a>
         <h1
           onClick={() => {
             next();
