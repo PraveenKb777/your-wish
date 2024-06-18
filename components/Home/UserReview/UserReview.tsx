@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Comet from "@/components/Comet/Comet";
 import GradientText from "@/components/GradientText/GradientText";
 import { StackedCards } from "@/components/StackedCards/StackedCards";
