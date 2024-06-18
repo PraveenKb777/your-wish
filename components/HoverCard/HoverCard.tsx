@@ -32,7 +32,7 @@ export default function HoverCard() {
         </p>
       </div>
 
-      <Button />
+      <Button label="it is a lable" />
     </div>
   );
 }
