@@ -5,6 +5,7 @@ import GradientText from "@/components/GradientText/GradientText";
 import Button from "@/components/Button/Button";
 import { StackedCards } from "@/components/StackedCards/StackedCards";
 import "./index.css";
+import AvatarCombined from "@/components/Avatar/Avatar";
 interface IImgList {
   url: string;
   id?: string;
@@ -68,7 +69,7 @@ export const HeroSection = () => {
           >
             {home.heroSection.content}
           </p>
-          <div className="self-start w-[50%] mt-5">
+          <div className="self-start w-[50%] my-5">
             <Button
               style={{
                 animation: `comeFromBottom ${ANIMATION_DURATION}ms`,
@@ -79,6 +80,14 @@ export const HeroSection = () => {
               label={home.heroSection.actionButtonLabel}
             />
           </div>
+          <AvatarCombined
+            style={{
+              animation: `comeFromBottom ${ANIMATION_DURATION}ms`,
+              opacity: 0,
+              animationFillMode: "forwards",
+              animationDelay: ".8s",
+            }}
+          />
         </div>
         <div className="flex">
           <MariqueeCarousal
@@ -101,7 +110,6 @@ export const HeroSection = () => {
           />
         </div>
       </div>
-      <StackedCards list={imgList} />
     </>
   );
 };

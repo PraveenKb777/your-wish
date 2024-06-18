@@ -1,9 +1,11 @@
 @keyframes cometAnimation {
   0% {
+    filter: brightness(0);
     opacity: 1;
     transform: rotate(200deg) translateX(1000px);
   }
   100% {
+    filter: brightness(5);
     opacity: 0;
     transform: rotate(200deg) translateX(-1000px);
   }

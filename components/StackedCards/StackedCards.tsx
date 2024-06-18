@@ -13,24 +13,22 @@ export const Card: React.FC<{
 }> = ({ index, val, current, animationName }) => {
   return (
     <div
-      className="rounded-lg border-white-100 border-2 absolute"
+      className="rounded-lg border-[#eeeeee1a] border-2 absolute background: "
       style={{
         height: "200px",
         aspectRatio: "16/9",
-        background: "grey",
+
+        background:
+          "linear-gradient(129deg, rgb(36, 36, 36) 0%, rgb(16, 16, 16) 100%)",
         top: `-${index * 10}px`,
         left: `-${index * 10}px`,
         zIndex: index,
-        backgroundColor: `#${val}${val}${val}`,
         transition: "all 300ms",
         animation: "500ms linear ",
         animationName: animationName,
         transformOrigin: "bottom left",
       }}
-    >
-      {val}
-      {current}
-    </div>
+    ></div>
   );
 };
 
@@ -111,7 +109,6 @@ export const StackedCards: React.FC<{ list: any[] }> = ({ list }) => {
         >
           Left
         </h1>
-        <a href="#home-hero-section">i love u</a>
         <h1
           onClick={() => {
             next();
