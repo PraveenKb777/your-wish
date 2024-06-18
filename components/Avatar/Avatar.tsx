@@ -20,7 +20,7 @@ export const Avatar: FC<IAvatar> = ({
   alt = "",
 }) => {
   const classStyle =
-    "border-2 border-white rounded-full dark:border-gray-800" + className;
+    "border-2 border-white rounded-full dark:border-gray-800 " + className;
 
   return (
     <Image

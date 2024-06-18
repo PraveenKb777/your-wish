@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <nav className="text-white sticky w-[100vw] top-0 left-0 bg-[#0b0b0b] pt-3  z-50 h-[78px] flex flex-col">
       <div className="flex justify-center w-full max-w-[1100px] self-center">
-        <Logo />
+        <Logo isTooltip />
         <div className="flex justify-between text-sm mb-4">
           <HeaderButton number={1} lable="Course" isSelected />
           <HeaderButton number={2} lable="About us" />
@@ -14,7 +14,6 @@ export const Header = () => {
         </div>
         <HeaderButton number={4} lable="Consider Us" className="mb-4 ml-auto" />
       </div>
-
       <div
         style={{
           background:

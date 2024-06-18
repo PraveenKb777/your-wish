@@ -1,7 +1,9 @@
+import Comet from "@/components/Comet/Comet";
 import GradientText from "@/components/GradientText/GradientText";
 import { StackedCards } from "@/components/StackedCards/StackedCards";
+import CONTENT from "@/content";
 import React, { FC } from "react";
-
+const { allReviews } = CONTENT.home.reviewsSection;
 interface IUserReview {
   id?: string;
 }
@@ -22,8 +24,10 @@ const UserReview: FC<IUserReview> = ({ id = "" }) => {
   return (
     <section
       id={id}
-      className="h-[100vh] w-full flex flex-col justify-center items-center text-white"
+      className=" w-full flex flex-col justify-center items-center text-white relative"
+      style={{ height: "calc(100vh - 78px)" }}
     >
+      <Comet />
       <GradientText element="h2" className="text-5xl">
         Don't Just Take Our Word, Take theirs!
       </GradientText>
@@ -31,7 +35,7 @@ const UserReview: FC<IUserReview> = ({ id = "" }) => {
         Our Students Love Our Courses, so you won't regret spending on our
         Courses.
       </p>
-      <StackedCards list={imgList} />
+      <StackedCards list={allReviews} />
     </section>
   );
 };
