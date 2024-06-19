@@ -25,7 +25,7 @@ const UserReview: FC<IUserReview> = ({ id = "" }) => {
   return (
     <section
       id={id}
-      className=" w-full flex flex-col justify-center items-center text-white relative"
+      className=" w-full flex flex-col justify-center items-center text-white elative"
       style={{ height: "calc(100vh - 78px)" }}
     >
       <Comet />

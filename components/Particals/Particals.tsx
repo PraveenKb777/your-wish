@@ -44,7 +44,7 @@ const Partical = () => {
 const ParticalsEffects: FC<{ top: number }> = ({ top }) => {
   return (
     <div
-      className="absolute"
+      className="absolute overflow-hidden"
       style={{
         top: `${(top - 1) * 100}vh`,
         height: "100vh",

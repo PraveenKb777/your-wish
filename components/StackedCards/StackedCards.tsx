@@ -14,13 +14,14 @@ export const Card: React.FC<{
   animationName: animationName;
   height?: number;
   item: Review;
-}> = ({ index, val, current, animationName, height = 380, item }) => {
+}> = ({ index, val, current, animationName, height = 300, item }) => {
   return (
     <div
-      className="rounded-lg border-[#eeeeee1a] border-2 absolute p-10"
+      className="rounded-lg border-[#eeeeee1a] border-2 absolute p-5 stack-card"
       style={{
         height: `${height}px`,
         overflowY: "scroll",
+        scrollbarWidth: "none",
         aspectRatio: "16/9",
         background:
           "linear-gradient(129deg, rgb(36, 36, 36) 0%, rgb(16, 16, 16) 100%)",
@@ -37,7 +38,7 @@ export const Card: React.FC<{
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 256 256"
         focusable="false"
-        className="h-10 w-10"
+        className="h-6 w-6"
         fill="#ffffff80"
         style={{ transform: "rotateY(180deg)" }}
       >
@@ -45,11 +46,11 @@ export const Card: React.FC<{
           <path d="M116,72v88a48.05,48.05,0,0,1-48,48,8,8,0,0,1,0-16,32,32,0,0,0,32-32v-8H40a16,16,0,0,1-16-16V72A16,16,0,0,1,40,56h60A16,16,0,0,1,116,72ZM216,56H156a16,16,0,0,0-16,16v64a16,16,0,0,0,16,16h60v8a32,32,0,0,1-32,32,8,8,0,0,0,0,16,48.05,48.05,0,0,0,48-48V72A16,16,0,0,0,216,56Z"></path>
         </g>
       </svg>
-      <p className="text-2xl font-thin my-4">{item.content}</p>
+      <p className="text-xl font-thin my-4">{item.content}</p>
       <div className="flex w-full">
         <Avatar src={""} className="self-center mr-5" />
         <div>
-          <h6 className="font-semibold text-2xl">{item.author}</h6>
+          <h6 className="font-semibold text-lg">{item.author}</h6>
           <p className="text-xs">
             {item.authorRole} {"   "}
             {/* <span className="text-yellow-300 mt-2 ">{item.rating}</span> */}
@@ -129,7 +130,7 @@ export const StackedCards: React.FC<{ list: Review[] }> = ({ list }) => {
 
   return (
     <>
-      <div className="text-white hover:cursor-pointer flex my-6">
+      <div className="text-white hover:cursor-pointer flex my-3">
         <svg
           onClick={() => {
             prev();
@@ -160,7 +161,7 @@ export const StackedCards: React.FC<{ list: Review[] }> = ({ list }) => {
         </svg>
       </div>
       <div
-        className="relative h-[450px] m-10 flex  "
+        className="relative h-[350px] m-10 flex stack-card "
         style={{
           color: "white",
           aspectRatio: "18/12",
