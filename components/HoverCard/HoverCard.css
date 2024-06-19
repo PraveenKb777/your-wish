@@ -4,10 +4,11 @@
     width: 350px;
     padding: 15px;
     overflow: hidden;
-    background-color: #161616;
-    /* background: 
-        linear-gradient(323deg, rgba(255, 255, 255, 0.03) 0%, rgba(171, 171, 171, 0) 100%); */
     transition: background-color 0.5s ease-out;
+    border-radius: 10px;
+    background: linear-gradient(323deg, rgba(255, 255, 255, 0.03) 0%, rgba(171, 171, 171, 0) 100%);
+    opacity: 1;
+    border: 1px solid rgba(238, 238, 238, 0.1);
 }
 
 .cardContainer::before {
@@ -30,3 +31,6 @@
 .cardContainer:focus::before {
     opacity: 1;
 }
+.rounded-image {
+    border-radius: 10px;
+  }

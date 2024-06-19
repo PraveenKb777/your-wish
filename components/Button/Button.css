@@ -4,17 +4,23 @@
     border-radius: 7px;
     opacity: 1;
     color: black;
-    padding: 8px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, opacity 0.3s ease, color 0.3s ease, padding 0.3s ease;
+    position: relative;
 }
 
 .ButtonText {
-    width: 80%;
+    transition: width 0.3s ease;
 }
 
 .Buttonsvg {
-    width: 20%;
     transition: transform 0.3s ease;
+    position: absolute;
+    right: 10px;
+    margin: 4px;
+}
+
+.ButtonContainer:hover {
+    background-color: rgb(64, 222, 146);
 }
 
 .ButtonContainer:hover .Buttonsvg {

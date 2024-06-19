@@ -8,9 +8,8 @@ interface iButton {
 }
 
 const Button: React.FC<iButton> = ({ label, className = "", style = {} }) => {
-  const addStyle =
-    className +
-    " font-bold py-2 px-4 rounded flex items-center justify-between ButtonContainer";
+
+  const addStyle = className + "font-bold py-2 px-4 rounded flex justify-center w-full ButtonContainer";
 
   return (
     <button className={addStyle} style={style}>

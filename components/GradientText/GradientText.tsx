@@ -1,5 +1,3 @@
-import "./index.css";
-
 import { CSSProperties, FunctionComponent, ReactNode } from "react";
 
 interface IGradientText {

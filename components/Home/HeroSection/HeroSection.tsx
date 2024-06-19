@@ -5,6 +5,7 @@ import GradientText from "@/components/GradientText/GradientText";
 import Button from "@/components/Button/Button";
 import { StackedCards } from "@/components/StackedCards/StackedCards";
 import "./index.css";
+import StyledText from "@/components/StyledText/StyledText";
 interface IImgList {
   url: string;
   id?: string;
@@ -57,17 +58,19 @@ export const HeroSection = () => {
           >
             {home.heroSection.subTitle}
           </GradientText>
-          <p
-            style={{
-              animation: `comeFromBottom ${ANIMATION_DURATION}ms`,
-              opacity: 0,
-              animationFillMode: "forwards",
-              animationDelay: ".5s",
-            }}
-            className="font-thin mt-6"
-          >
+
+          <StyledText
+           fontSize="17px"
+           marginTop="10px"
+           style={{
+            animation: `comeFromBottom ${ANIMATION_DURATION}ms`,
+            opacity: 0,
+            animationFillMode: "forwards",
+            animationDelay: ".2s",
+          }}>
             {home.heroSection.content}
-          </p>
+          </StyledText>
+          
           <div className="self-start w-[50%] mt-5">
             <Button
               style={{
@@ -101,7 +104,7 @@ export const HeroSection = () => {
           />
         </div>
       </div>
-      <StackedCards list={imgList} />
+      {/* <StackedCards list={imgList} /> */}
     </>
   );
 };
