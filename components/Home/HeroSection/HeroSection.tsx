@@ -6,6 +6,7 @@ import Button from "@/components/Button/Button";
 import { StackedCards } from "@/components/StackedCards/StackedCards";
 import "./index.css";
 import StyledText from "@/components/StyledText/StyledText";
+import AvatarCombined from "@/components/Avatar/Avatar";
 interface IImgList {
   url: string;
   id?: string;
@@ -82,6 +83,14 @@ export const HeroSection = () => {
               label={home.heroSection.actionButtonLabel}
             />
           </div>
+          <AvatarCombined
+            style={{
+              animation: `comeFromBottom ${ANIMATION_DURATION}ms`,
+              opacity: 0,
+              animationFillMode: "forwards",
+              animationDelay: ".8s",
+            }}
+          />
         </div>
         <div className="flex">
           <MariqueeCarousal

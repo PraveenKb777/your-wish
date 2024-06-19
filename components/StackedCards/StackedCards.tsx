@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import "./index.css";
+import CONTENT, { Review } from "@/content";
+import { Avatar } from "../Avatar/Avatar";
 
 type animationName = "stackForward" | "none";
 
@@ -10,31 +12,55 @@ export const Card: React.FC<{
   current: number;
   val: number;
   animationName: animationName;
-}> = ({ index, val, current, animationName }) => {
+  height?: number;
+  item: Review;
+}> = ({ index, val, current, animationName, height = 380, item }) => {
   return (
     <div
-      className="rounded-lg border-white-100 border-2 absolute"
+      className="rounded-lg border-[#eeeeee1a] border-2 absolute p-10"
       style={{
-        height: "200px",
+        height: `${height}px`,
+        overflowY: "scroll",
         aspectRatio: "16/9",
-        background: "grey",
-        top: `-${index * 10}px`,
-        left: `-${index * 10}px`,
+        background:
+          "linear-gradient(129deg, rgb(36, 36, 36) 0%, rgb(16, 16, 16) 100%)",
+        top: `${-index * 10}px`,
+        left: `${-index * 10}px`,
         zIndex: index,
-        backgroundColor: `#${val}${val}${val}`,
         transition: "all 300ms",
         animation: "500ms linear ",
         animationName: animationName,
         transformOrigin: "bottom left",
       }}
     >
-      {val}
-      {current}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 256 256"
+        focusable="false"
+        className="h-10 w-10"
+        fill="#ffffff80"
+        style={{ transform: "rotateY(180deg)" }}
+      >
+        <g>
+          <path d="M116,72v88a48.05,48.05,0,0,1-48,48,8,8,0,0,1,0-16,32,32,0,0,0,32-32v-8H40a16,16,0,0,1-16-16V72A16,16,0,0,1,40,56h60A16,16,0,0,1,116,72ZM216,56H156a16,16,0,0,0-16,16v64a16,16,0,0,0,16,16h60v8a32,32,0,0,1-32,32,8,8,0,0,0,0,16,48.05,48.05,0,0,0,48-48V72A16,16,0,0,0,216,56Z"></path>
+        </g>
+      </svg>
+      <p className="text-2xl font-thin my-4">{item.content}</p>
+      <div className="flex w-full">
+        <Avatar src={""} className="self-center mr-5" />
+        <div>
+          <h6 className="font-semibold text-2xl">{item.author}</h6>
+          <p className="text-xs">
+            {item.authorRole} {"   "}
+            {/* <span className="text-yellow-300 mt-2 ">{item.rating}</span> */}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
 
-export const StackedCards: React.FC<{ list: any[] }> = ({ list }) => {
+export const StackedCards: React.FC<{ list: Review[] }> = ({ list }) => {
   const [index, setIndex] = useState<number>(0);
   const [zindex, setZindex] = useState<number[]>(list.map((_, i) => i));
   const [animationName, setanimationName] = useState<{
@@ -103,42 +129,75 @@ export const StackedCards: React.FC<{ list: any[] }> = ({ list }) => {
 
   return (
     <>
-      <div className="text-white hover:cursor-pointer">
-        <h1
+      <div className="text-white hover:cursor-pointer flex my-6">
+        <svg
           onClick={() => {
             prev();
           }}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 256"
+          fill="rgb(255, 255, 255)"
+          className="h-8 w-8 p-1 rounded-lg border-[#eeeeee1a] border-[1px]  bg-gradient-to-r from-[#ffffff17] mr-5"
         >
-          Left
-        </h1>
-        <a href="#home-hero-section">i love u</a>
-        <h1
+          <g fill="rgb(255, 255, 255,0.5)">
+            <path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path>
+          </g>
+        </svg>
+
+        <svg
           onClick={() => {
             next();
           }}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 256 256"
+          focusable="false"
+          fill="rgb(255, 255, 255)"
+          className="h-8 w-8 p-1 rounded-lg border-[#eeeeee1a] border-[1px]  bg-gradient-to-r from-[#ffffff17]"
         >
-          Right
-        </h1>
+          <g fill="rgb(255, 255, 255,0.5)">
+            <path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"></path>
+          </g>
+        </svg>
       </div>
       <div
-        className="relative h-[400px] m-10"
-        style={{ color: "white", aspectRatio: "18/12" }}
+        className="relative h-[450px] m-10 flex  "
+        style={{
+          color: "white",
+          aspectRatio: "18/12",
+          left: -list.length * 10,
+        }}
       >
-        {list?.map((_, i) => {
-          return (
-            <Card
-              index={zindex[list.length - i - 1]}
-              total={list.length}
-              current={index}
-              val={i}
-              animationName={
-                animationName.animationIndex === i
-                  ? animationName.animationName
-                  : "none"
-              }
-            />
-          );
-        })}
+        <div
+          className="h-20 w-1 self-center rounded-full overflow-hidden  mr-10 relative"
+          style={{ backgroundColor: "rgba(238, 238, 238, 0.05)" }}
+        >
+          <div
+            className=" w-ful transition-all"
+            style={{
+              height: `${((index + 1) * 100) / list.length}%`,
+              backgroundColor: "white",
+            }}
+          />
+        </div>
+        <div className="relative top-10 left-10 bg-green-500 w-7 h-7">
+          {list?.map((e, i) => {
+            return (
+              <Card
+                index={zindex[list.length - i - 1]}
+                total={list.length}
+                current={index}
+                key={e.author + e.rating + i}
+                item={e}
+                val={i}
+                animationName={
+                  animationName.animationIndex === i
+                    ? animationName.animationName
+                    : "none"
+                }
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );

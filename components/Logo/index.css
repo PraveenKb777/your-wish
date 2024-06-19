@@ -1,0 +1,12 @@
+#logo-suggestion {
+  opacity: 0;
+  transition: all 150ms;
+  transform-origin: left center;
+  font-size: 0.7rem;
+  scale: 0;
+}
+
+.main-logo:hover > #logo-suggestion {
+  scale: 1;
+  opacity: 1;
+}
