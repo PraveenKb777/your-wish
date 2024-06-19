@@ -2,8 +2,11 @@ import React, { FC } from "react";
 import "./index.css";
 import GradientText from "@/components/GradientText/GradientText";
 import CONTENT from "@/content";
-import HoverCard from "@/components/HoverCard/HoverCard";
+import dynamic from "next/dynamic";
 
+const HoverCard = dynamic(() => import("@/components/HoverCard/HoverCard"), {
+  ssr: false,
+});
 interface IFeatureCoursed {
   id?: string;
 }
