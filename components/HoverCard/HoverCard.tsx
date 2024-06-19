@@ -7,7 +7,6 @@ import Button from "../Button/Button";
 import GradientText from "../GradientText/GradientText";
 import StyledText from "../StyledText/StyledText";
 
-
 type HoverCardProps = {
   title: string;
   name: string;
@@ -16,12 +15,18 @@ type HoverCardProps = {
   animationDuration: number;
 };
 
-export default function HoverCard({ title, name, description, buttonLabel, animationDuration }: HoverCardProps) {
+export default function HoverCard({
+  title,
+  name,
+  description,
+  buttonLabel,
+  animationDuration,
+}: HoverCardProps) {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-lg cardContainer">
       <Image
         sizes="calc(min(350px, 100vw) - 30px)"
-        className="w-full rounded-image"
+        className="w-full rounded-lg border border-[#eeeeee1a]"
         src={image1}
         alt="Course Image"
       />
@@ -49,13 +54,9 @@ export default function HoverCard({ title, name, description, buttonLabel, anima
           </GradientText>
         </div>
 
-        <StyledText
-          fontSize="14px"
-          marginTop="15px">
+        <StyledText fontSize="14px" marginTop="15px">
           {description}
         </StyledText>
-
-
       </div>
       <Button
         style={{

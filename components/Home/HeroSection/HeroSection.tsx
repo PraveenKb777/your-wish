@@ -61,18 +61,19 @@ export const HeroSection = () => {
           </GradientText>
 
           <StyledText
-           fontSize="17px"
-           marginTop="10px"
-           style={{
-            animation: `comeFromBottom ${ANIMATION_DURATION}ms`,
-            opacity: 0,
-            animationFillMode: "forwards",
-            animationDelay: ".2s",
-          }}>
+            fontSize="17px"
+            marginTop="10px"
+            style={{
+              animation: `comeFromBottom ${ANIMATION_DURATION}ms`,
+              opacity: 0,
+              animationFillMode: "forwards",
+              animationDelay: ".2s",
+            }}
+          >
             {home.heroSection.content}
           </StyledText>
-          
-          <div className="self-start w-[50%] mt-5">
+
+          <div className="self-start w-[50%] my-5">
             <Button
               style={{
                 animation: `comeFromBottom ${ANIMATION_DURATION}ms`,

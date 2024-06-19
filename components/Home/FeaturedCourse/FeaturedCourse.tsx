@@ -1,17 +1,24 @@
-import React from 'react';
-import "./index.css"
-import GradientText from '@/components/GradientText/GradientText';
-import CONTENT from '@/content';
-import HoverCard from '@/components/HoverCard/HoverCard';
+import React, { FC } from "react";
+import "./index.css";
+import GradientText from "@/components/GradientText/GradientText";
+import CONTENT from "@/content";
+import HoverCard from "@/components/HoverCard/HoverCard";
 
-export default function FeaturedCourse() {
+interface IFeatureCoursed {
+  id?: string;
+}
 
+const FeaturedCourse: FC<IFeatureCoursed> = ({ id = "" }) => {
   const ANIMATION_DURATION = 500;
   const { home } = CONTENT;
 
   return (
-    <div className='mt-12'>
-      <div>
+    <section
+      className="mt-12 flex justify-center items-center flex-col"
+      id={id}
+      style={{ height: "calc(100vh - 78px)" }}
+    >
+      <div className="self-start">
         <GradientText
           element="h6"
           className="text-4xl font-medium"
@@ -26,7 +33,7 @@ export default function FeaturedCourse() {
         </GradientText>
       </div>
 
-      <div className='grid grid-cols-3 gap-[30px] mt-9'>
+      <div className="grid grid-cols-3 gap-[30px] mt-9">
         {home.featuredCourse.cardContent.map((course, index) => (
           <HoverCard
             key={index}
@@ -38,7 +45,8 @@ export default function FeaturedCourse() {
           />
         ))}
       </div>
+    </section>
+  );
+};
 
-    </div>
-  )
-}
+export default FeaturedCourse;

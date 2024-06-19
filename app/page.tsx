@@ -6,7 +6,8 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <FeaturedCourse/>
+      <FeaturedCourse id="home-screen-feature-course" />
+      <UserReview id="home-screen-user-review" />
     </>
   );
 }

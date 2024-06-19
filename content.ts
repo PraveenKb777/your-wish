@@ -73,16 +73,7 @@ export interface Review {
                         "name": "Alice Johnson",
                         "description": "Explore data analysis, statistical models, and visualization techniques using R programming. Ideal for aspiring data scientists."
                     },
-                    {
-                        "title": "Introduction to Python",
-                        "name": "John Doe",
-                        "description": "A comprehensive course that introduces the basics of Python programming. Learn syntax, data structures, and basic algorithms."
-                    },
-                    {
-                        "title": "Advanced JavaScript",
-                        "name": "Jane Smith",
-                        "description": "An in-depth look into advanced JavaScript concepts including ES6, asynchronous programming, and JavaScript frameworks."
-                    },
+                 
                 ]
                 
             }
