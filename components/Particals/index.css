@@ -1,0 +1,15 @@
+@keyframes move {
+  to {
+    transform: translate(calc(var(--x)), calc(var(--y)));
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

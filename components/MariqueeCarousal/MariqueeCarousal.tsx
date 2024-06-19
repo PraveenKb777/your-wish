@@ -31,7 +31,10 @@ const MariqueeCarousal: React.FC<IMarqueeCarousal> = (props) => {
     <>
       <div
         style={
-          { "--duration": `${duration ? duration : 60}s` } as CustomCssStyles
+          {
+            "--duration": `${duration ? duration : 60}s`,
+            zIndex: 2,
+          } as CustomCssStyles
         }
         className={`marquee ${
           marqueeDirection === "vertical" ? "marquee--vertical" : ""

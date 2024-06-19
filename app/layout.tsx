@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header/Header";
 import Comet from "@/components/Comet/Comet";
+import Particals from "@/components/Particals/Particals";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <Particals top={2} />
         <Header />
         <div className="line" />
         <div className="line line2" />
