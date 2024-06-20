@@ -169,7 +169,7 @@ const Logo: FC<ILogo> = ({ style = {}, className = "", isTooltip = false }) => {
     <div
       style={style}
       className={
-        "main-logo cursor-pointer bg-white self-center mb-4 rounded-md p-1 mr-auto hover:scale-[1.1] transition-all relative " +
+        "main-logo cursor-pointer bg-white self-center mb-4 rounded-md p-1 hover:scale-[1.1] transition-all relative " +
         className
       }
     >

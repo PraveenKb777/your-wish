@@ -1,13 +1,12 @@
-"use client";
-
 import React from "react";
 import "./index.css";
+import Link from "next/link";
 
 interface IHeaderButton {
   number: number;
   lable: string;
   isSelected?: boolean;
-  onClick?: () => void;
+  href: string;
   className?: string;
 }
 
@@ -15,16 +14,16 @@ export const HeaderButton: React.FC<IHeaderButton> = ({
   lable,
   number,
   isSelected = false,
-  onClick = () => {},
+  href,
   className = "",
 }) => {
   const buttonClass = isSelected
-    ? "rounded-lg border-[#eeeeee1a] border-[1px]  bg-gradient-to-r from-[#ffffff17]"
+    ? " rounded-lg border-[#eeeeee1a] border-[1px]  bg-gradient-to-r from-[#ffffff17] shine "
     : "";
 
   return (
-    <button
-      onClick={onClick}
+    <Link
+      href={href}
       className={
         `flex items-center justify-center ${
           !isSelected ? "text-gray-500 " : " text-white "
@@ -37,6 +36,6 @@ export const HeaderButton: React.FC<IHeaderButton> = ({
         <p className="mx-2 my-1 text-xs">{number}</p>
       </div>
       <p className="header-button-content">{lable}</p>
-    </button>
+    </Link>
   );
 };
