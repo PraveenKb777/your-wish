@@ -21,7 +21,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Particals top={2} />
         <Header />
         <div className="line" />
         <div className="line line2" />
