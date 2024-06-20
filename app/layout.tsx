@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header/Header";
 import Comet from "@/components/Comet/Comet";
 import Particals from "@/components/Particals/Particals";
+import Footer from "@/components/Footer/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,6 +27,7 @@ export default function RootLayout({
         <div className="line line2" />
         <Comet />
         <div className="w-[1100px]">{children}</div>
+        <Footer />
       </body>
     </html>
   );

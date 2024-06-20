@@ -25,8 +25,7 @@ const UserReview: FC<IUserReview> = ({ id = "" }) => {
   return (
     <section
       id={id}
-      className=" w-full flex flex-col justify-center items-center text-white elative"
-      style={{ height: "calc(100vh - 78px)" }}
+      className=" w-full flex flex-col justify-center items-center text-white relative my-12"
     >
       <Comet />
       <GradientText element="h2" className="text-5xl">

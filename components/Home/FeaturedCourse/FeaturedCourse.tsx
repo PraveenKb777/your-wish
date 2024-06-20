@@ -17,9 +17,8 @@ const FeaturedCourse: FC<IFeatureCoursed> = ({ id = "" }) => {
 
   return (
     <section
-      className="mt-12 flex justify-center items-center flex-col"
+      className="my-12 flex justify-center items-center flex-col"
       id={id}
-      style={{ height: "calc(100vh - 78px)" }}
     >
       <div className="self-start">
         <GradientText

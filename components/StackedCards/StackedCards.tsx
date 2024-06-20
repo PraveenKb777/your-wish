@@ -14,7 +14,7 @@ export const Card: React.FC<{
   animationName: animationName;
   height?: number;
   item: Review;
-}> = ({ index, val, current, animationName, height = 300, item }) => {
+}> = ({ index, val, current, animationName, height = 380, item }) => {
   return (
     <div
       className="rounded-lg border-[#eeeeee1a] border-2 absolute p-5 stack-card"
@@ -161,7 +161,7 @@ export const StackedCards: React.FC<{ list: Review[] }> = ({ list }) => {
         </svg>
       </div>
       <div
-        className="relative h-[350px] m-10 flex stack-card "
+        className="relative h-[450px] m-10 flex stack-card "
         style={{
           color: "white",
           aspectRatio: "18/12",

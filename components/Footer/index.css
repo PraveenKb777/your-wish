@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .hover-footer {
+    @apply mr-4 hover:text-white cursor-pointer transition-all;
+  }
+}
+
+.footer-input-cont:has(.footer-input:focus),
+.footer-input-cont:has(.footer-input:not(:focus)) {
+  transition: all 0.5s;
+}
+
+.footer-input-cont:has(.footer-input:focus) {
+  border-color: #ffffff90;
+}
