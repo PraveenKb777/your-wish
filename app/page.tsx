@@ -6,6 +6,8 @@ import ParticalsEffects from "@/components/Particals/Particals";
 export default function Home() {
   return (
     <>
+      <div className="line" />
+      <div className="line line2" />
       <ParticalsEffects top={2} />
       <HeroSection />
       <FeaturedCourse id="home-screen-feature-course" />

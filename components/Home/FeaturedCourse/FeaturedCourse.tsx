@@ -3,10 +3,13 @@ import "./index.css";
 import GradientText from "@/components/GradientText/GradientText";
 import CONTENT from "@/content";
 import dynamic from "next/dynamic";
+import HoverCard from "@/components/HoverCard/HoverCard";
 
-const HoverCard = dynamic(() => import("@/components/HoverCard/HoverCard"), {
-  ssr: false,
-});
+// const HoverCard = dynamic(() => import("@/components/HoverCard/HoverCard"), {
+//   ssr: false,
+//   loading: () => <p className="text-white">Loading...</p>,
+// });
+
 interface IFeatureCoursed {
   id?: string;
 }

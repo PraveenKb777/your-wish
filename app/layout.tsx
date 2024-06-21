@@ -22,8 +22,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <div className="line" />
-        <div className="line line2" />
         <Comet />
         <div className="w-[1100px]">{children}</div>
         <Footer />

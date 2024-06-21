@@ -1,12 +1,9 @@
-"use client";
-
 import Image from "next/image";
 import image1 from "../../assets/images/cardImg1.jpg";
 import Button from "../Button/Button";
 import GradientText from "../GradientText/GradientText";
 import StyledText from "../StyledText/StyledText";
 import "./HoverCard.css";
-import { useEffect, useRef } from "react";
 
 type HoverCardProps = {
   title: string;
@@ -15,15 +12,15 @@ type HoverCardProps = {
   buttonLabel: string;
   animationDuration: number;
 };
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("in-view");
-      return;
-    }
-    entry.target.classList.remove("in-view");
-  });
-});
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add("in-view");
+//       return;
+//     }
+//     entry.target.classList.remove("in-view");
+//   });
+// });
 
 export default function HoverCard({
   title,
@@ -32,19 +29,19 @@ export default function HoverCard({
   buttonLabel,
   animationDuration,
 }: HoverCardProps) {
-  const cardRef = useRef<HTMLDivElement>(null);
+  // const cardRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    for (let i = 0; i < cardRef.current?.childElementCount!; i++) {
-      observer.observe(cardRef.current?.children.item(i)!);
-    }
-  }, [cardRef.current?.children]);
+  // useEffect(() => {
+  //   for (let i = 0; i < cardRef.current?.childElementCount!; i++) {
+  //     observer.observe(cardRef.current?.children.item(i)!);
+  //   }
+  // }, [cardRef.current?.children]);
 
   return (
     <div className="bg-[#0b0b0b] card_main-cont">
       <div
         className="max-w-sm rounded overflow-hidden shadow-lg cardContainer "
-        ref={cardRef}
+        // ref={cardRef}
       >
         <Image
           sizes="calc(min(350px, 100vw) - 30px)"
