@@ -40,7 +40,6 @@ export const HeroSection = () => {
             className=" text-5xl font-semibold "
             style={{
               animation: `comeFromBottom ${ANIMATION_DURATION}ms`,
-              opacity: 0,
               animationFillMode: "forwards",
               animationDelay: "0s",
             }}
@@ -52,7 +51,6 @@ export const HeroSection = () => {
             className="text-5xl font-semibold"
             style={{
               animation: `comeFromBottom ${ANIMATION_DURATION}ms`,
-              opacity: 0,
               animationFillMode: "forwards",
               animationDelay: ".2s",
             }}

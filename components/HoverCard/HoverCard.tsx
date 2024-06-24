@@ -64,7 +64,6 @@ export default function HoverCard({
               className=" text-1.5xl font-semibold"
               style={{
                 animation: `comeFromBottom ${animationDuration}ms`,
-                opacity: 0,
                 animationFillMode: "forwards",
                 animationDelay: "0s",
               }}
