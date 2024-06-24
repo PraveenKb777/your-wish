@@ -8,8 +8,7 @@
   margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-}
+@media (prefers-color-scheme: dark) {}
 
 :root {
   background-color: #0b0b0b;
@@ -47,11 +46,9 @@ body {
 }
 
 .line {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.03) 0%,
-    rgba(171, 171, 171, 0) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(171, 171, 171, 0) 100%);
   flex: none;
   height: 20%;
   left: -78px;
@@ -76,31 +73,24 @@ body {
 @keyframes line2Animation {
   0% {
     opacity: 0;
-    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1)
-      rotate(25deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg)
-      translateZ(0px);
+    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(25deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
   }
 
   100% {
     opacity: 1;
-    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1)
-      rotate(15deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg)
-      translateZ(0px);
+    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(15deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
   }
 }
+
 @keyframes line1Animation {
   0% {
     opacity: 0;
-    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1)
-      rotate(30deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg)
-      translateZ(0px);
+    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(30deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
   }
 
   100% {
     opacity: 1;
-    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1)
-      rotate(25deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg)
-      translateZ(0px);
+    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(25deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
   }
 }
 
@@ -117,4 +107,24 @@ body {
   top: 0;
   border-radius: inherit;
   pointer-events: none;
+}
+
+.GreenText {
+  font-size: 17px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgb(84, 242, 166);
+}
+
+.main-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  height: 100vh;
+}
+
+.warningIcon {
+  width: 30px;
+  height: 30px;
 }
