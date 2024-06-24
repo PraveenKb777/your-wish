@@ -29,7 +29,6 @@ const FeaturedCourse: FC<IFeatureCoursed> = ({ id = "" }) => {
           className="text-4xl font-medium"
           style={{
             animation: `comeFromBottom ${ANIMATION_DURATION}ms`,
-            opacity: 0,
             animationFillMode: "forwards",
             animationDelay: "0s",
           }}
