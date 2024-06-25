@@ -8,7 +8,8 @@
   margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {}
+@media (prefers-color-scheme: dark) {
+}
 
 :root {
   background-color: #0b0b0b;
@@ -46,9 +47,11 @@ body {
 }
 
 .line {
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.03) 0%,
-      rgba(171, 171, 171, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(171, 171, 171, 0) 100%
+  );
   flex: none;
   height: 20%;
   left: -78px;
@@ -73,24 +76,32 @@ body {
 @keyframes line2Animation {
   0% {
     opacity: 0;
-    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(25deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
+    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1)
+      rotate(25deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg)
+      translateZ(0px);
   }
 
   100% {
     opacity: 1;
-    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(15deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
+    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1)
+      rotate(15deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg)
+      translateZ(0px);
   }
 }
 
 @keyframes line1Animation {
   0% {
     opacity: 0;
-    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(30deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
+    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1)
+      rotate(30deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg)
+      translateZ(0px);
   }
 
   100% {
     opacity: 1;
-    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(25deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
+    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1)
+      rotate(25deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg)
+      translateZ(0px);
   }
 }
 
@@ -120,8 +131,8 @@ body {
   width: 70%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   margin-top: 30px;
-  height: 100vh - 78px;
   gap: 15px;
 }
 
@@ -131,9 +142,11 @@ body {
 }
 
 .line3 {
-  background: linear-gradient(180deg,
-      rgba(255, 255, 255, 0.03) 0%,
-      rgba(171, 171, 171, 0) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(171, 171, 171, 0) 100%
+  );
   flex: none;
   height: 20%;
   left: 70%;
@@ -150,7 +163,7 @@ body {
 
 .line4 {
   top: 73px;
-  left: 70%; 
+  left: 70%;
   animation: line4Animation 1s ease; /* Updated animation name */
   animation-fill-mode: forwards;
 }
@@ -158,28 +171,37 @@ body {
 @keyframes line4Animation {
   0% {
     opacity: 0;
-    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(25deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
+    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1)
+      rotate(25deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg)
+      translateZ(0px);
   }
 
   100% {
     opacity: 1;
-    transform: perspective(1200px) translateX(-50%) translateY(0px) scale(1) rotate(15deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
+    transform: perspective(1200px) translateX(-50%) translateY(0px) scale(1)
+      rotate(15deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg)
+      translateZ(0px);
   }
 }
 
 @keyframes line3Animation {
   0% {
     opacity: 0;
-    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1) rotate(30deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
+    transform: perspective(1200px) translateX(0px) translateY(0px) scale(1)
+      rotate(30deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg)
+      translateZ(0px);
   }
 
   100% {
     opacity: 1;
-    transform: perspective(1200px) translateX(-50%) translateY(0px) scale(1) rotate(25deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg) translateZ(0px);
+    transform: perspective(1200px) translateX(-50%) translateY(0px) scale(1)
+      rotate(25deg) rotateX(0deg) rotateY(0deg) skewX(0deg) skewY(0deg)
+      translateZ(0px);
   }
 }
 
-.line3::after, .line4::after {
+.line3::after,
+.line4::after {
   content: "";
   border-width: 1px 0 0 0;
   border-color: rgba(238, 238, 238, 0.1);

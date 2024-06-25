@@ -1,5 +1,5 @@
 import React, { CSSProperties, FC } from "react";
-import LogoCom from "../../public/svgs/logo.svg";
+// import LogoCom from "../../public/svgs/logo.svg";
 import "./index.css";
 const SVGComponent = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
