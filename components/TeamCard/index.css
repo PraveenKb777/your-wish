@@ -1,0 +1,77 @@
+.cardContainer {
+  position: relative;
+  cursor: default;
+  width: 350px;
+  padding: 25px;
+  overflow: hidden;
+  transition: background-color 0.5s ease-out;
+  border-radius: 10px;
+  background: linear-gradient(
+    323deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(171, 171, 171, 0) 100%
+  );
+  opacity: 1;
+  border: 1px solid rgba(238, 238, 238, 0.1);
+}
+
+.cardContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    323deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(171, 171, 171, 0) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  pointer-events: none;
+  clip-path: polygon(100% 100%, 100% 0%, 0% 0%, 0% 100%);
+  z-index: 10;
+}
+
+.cardContainer:hover::before,
+.cardContainer:focus::before {
+  opacity: 1;
+}
+
+/* .cardContainer > img {
+  opacity: 0;
+}
+
+.cardContainer > button {
+  transform: scale(0);
+  opacity: 0;
+}
+
+.cardContainer img.in-view {
+  animation: opacityAnimation 300ms ease-in forwards;
+}
+
+.cardContainer button.in-view {
+  animation: opacityAnimation 300ms ease-in forwards;
+} */
+
+@keyframes buttonComefromBootom {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
