@@ -39,26 +39,9 @@
   opacity: 1;
 }
 
-/* .cardContainer > img {
-  opacity: 0;
-}
-
-.cardContainer > button {
-  transform: scale(0);
-  opacity: 0;
-}
-
-.cardContainer img.in-view {
-  animation: opacityAnimation 300ms ease-in forwards;
-}
-
-.cardContainer button.in-view {
-  animation: opacityAnimation 300ms ease-in forwards;
-} */
-
-@keyframes buttonComefromBootom {
+@keyframes zoomIn {
   0% {
-    transform: scale(0);
+    transform: scale(0.9);
     opacity: 0;
   }
   100% {
@@ -66,12 +49,65 @@
     opacity: 1;
   }
 }
-@keyframes opacityAnimation {
-  0% {
-    opacity: 0;
-  }
 
-  100% {
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
     opacity: 1;
   }
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
+.card_main-cont {
+  position: relative;
+}
+
+.view {
+  display: none;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.1s;
+}
+
+.cardContainer .firstView {
+  display: block;
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0.1s;
+}
+
+.cardContainer.active .firstView {
+  animation: zoomOut 0.5s forwards;
+  display: none;
+}
+
+.cardContainer.active .secondView {
+  animation: zoomIn 0.5s forwards;
+  display: block;
+}
+
+.cardContainer .secondView {
+  position: relative;
+}
+
+.cardContainer .secondView .closebutton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: -15px;
+}
+
+.cardContainer:not(.active) .secondView {
+  animation: zoomOut 0.5s forwards;
+  display: none;
+}
+
+.cardContainer:not(.active) .firstView {
+  animation: zoomIn 0.5s forwards;
+  display: block;
 }

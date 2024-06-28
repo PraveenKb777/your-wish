@@ -1,3 +1,4 @@
+'use client'
 import ConnectBtn from '@/components/ConnectBtn/ConnectBtn'
 import GradientText from '@/components/GradientText/GradientText'
 import ParticalsEffects from '@/components/Particals/Particals'
@@ -71,14 +72,17 @@ export default function page() {
            
 
             <div className="grid grid-cols-3 gap-[30px]">
-                {home.featuredCourse.cardContent.map((course, index) => (
+                {home.teamDetails.cardContent.map((course, index) => (
                     <TeamCard
                         key={index}
-                        title={course.title}
-                        name={course.name}
+                        firstname={course.firstName}
+                        lastname={course.lastName}
+                        role={course.role}
                         description={course.description}
-                        buttonLabel={home.featuredCourse.buttonLabel}
+                        briefDescription={course.briefDescription}
+                        buttonLabel={home.teamDetails.buttonLabel}
                         animationDuration={ANIMATION_DURATION}
+                        index={index}
                     />
                 ))}
             </div>
