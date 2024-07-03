@@ -28,13 +28,13 @@ export default function TeamCard({
 }: TeamCardProps) {
 
   const handleToggle = (index: number) => {
-    const cardContainer = document.querySelectorAll('.cardContainer')[index];
-    cardContainer?.classList.toggle('active');
+    const TeamcardContainer = document.querySelectorAll('.TeamcardContainer')[index];
+    TeamcardContainer?.classList.toggle('active');
   };
 
   return (
     <div className="bg-[#0b0b0b] card_main-cont">
-      <div className="max-w-sm rounded overflow-hidden shadow-lg cardContainer">
+      <div className="max-w-sm rounded overflow-hidden shadow-lg TeamcardContainer">
         <div className="view firstView">
           <Image
             sizes="calc(min(350px, 100vw) - 30px)"

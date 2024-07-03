@@ -1,4 +1,4 @@
-.cardContainer {
+.TeamcardContainer {
   position: relative;
   cursor: default;
   width: 350px;
@@ -16,11 +16,11 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
-.cardContainer:hover {
+.TeamcardContainer:hover {
   transform: scale(1.02);
 }
 
-.cardContainer::-webkit-scrollbar {
+.TeamcardContainer::-webkit-scrollbar {
   display: none;
 }
 
@@ -58,7 +58,7 @@
   transition-delay: 0.1s;
 }
 
-.cardContainer .firstView {
+.TeamcardContainer .firstView {
   display: block;
   transform: scale(1);
   opacity: 1;
@@ -66,33 +66,33 @@
   transition-delay: 0.1s;
 }
 
-.cardContainer.active .firstView {
+.TeamcardContainer.active .firstView {
   animation: zoomOut 0.5s forwards;
   display: none;
 }
 
-.cardContainer.active .secondView {
+.TeamcardContainer.active .secondView {
   animation: zoomIn 0.5s forwards;
   display: block;
 }
 
-.cardContainer .secondView {
+.TeamcardContainer .secondView {
   position: relative;
 }
 
-.cardContainer .secondView .closebutton {
+.TeamcardContainer .secondView .closebutton {
   position: absolute;
   top: 0;
   right: 0;
   margin: -15px;
 }
 
-.cardContainer:not(.active) .secondView {
+.TeamcardContainer:not(.active) .secondView {
   animation: zoomOut 0.5s forwards;
   display: none;
 }
 
-.cardContainer:not(.active) .firstView {
+.TeamcardContainer:not(.active) .firstView {
   animation: zoomIn 0.5s forwards;
   display: block;
 }
