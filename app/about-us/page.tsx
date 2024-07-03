@@ -7,7 +7,7 @@ import React from 'react'
 import CONTENT from "@/content";
 const { home } = CONTENT;
 import TeamCard from '../../components/TeamCard/index'
-import TeamButton from '@/components/TeamButton/index'
+import UseOurPotentialCard from '../../components/UseOurPotentialCard/index'
 
 const ANIMATION_DURATION = 500;
 
@@ -52,6 +52,18 @@ export default function page() {
                 </StyledText>
             </div>
 
+            <div
+                style={{
+                    background:
+                        "linear-gradient(270deg, rgba(255, 255, 255, 0.2) 19.767%, rgba(225, 225, 225, 0.5) 49.7917%, rgba(171, 171, 171, 0.2) 80.3431%)",
+                    opacity: 1,
+                    height: 1,
+                    width: "100vw",
+                    position: "absolute",
+                    left: 0,
+                }}
+            ></div>
+
 
             <div className='flex justify-center items-center h-[50vh]' >
             <div className='w-[60%] flex flex-col justify-center items-center py-4'>
@@ -86,6 +98,11 @@ export default function page() {
                     />
                 ))}
             </div>
+
+            <div>
+                <UseOurPotentialCard/>
+            </div>
+
         </>
     )
 }
