@@ -6,9 +6,10 @@ import DownArrow from "../SVG/DownArrowSvg";
 
 interface AccordianProps {
   children: ReactNode;
+  question: string;
 }
 
-const Accordian: FC<AccordianProps> = ({ children }) => {
+const Accordian: FC<AccordianProps> = ({ children, question }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -21,7 +22,7 @@ const Accordian: FC<AccordianProps> = ({ children }) => {
       }}
     >
       <div className="p-4 flex justify-between">
-        <p>Can i access courses on multiple devices?</p>
+        <p>{question}</p>
         <div
           className="aspect-square h-5 transition-all duration-300"
           style={{

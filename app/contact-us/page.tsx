@@ -9,9 +9,13 @@ import ContactUsForm from "@/components/ContactUsForm/ContactUsForm";
 import ConnectBtn from "@/components/ConnectBtn/ConnectBtn";
 import Accordian from "@/components/Accordian/Accordian";
 import CallUsSvg from "@/components/SVG/CallUsSvg";
+import CONTENT from "@/content";
+const { contactUS } = CONTENT;
 
 import "./index.css";
 const ContactUs = () => {
+
+  let faqData = contactUS?.FAQ
   return (
     <>
       <div className="line" />
@@ -20,7 +24,7 @@ const ContactUs = () => {
       <main className="w-[1100px] overflow-x-hidden relative">
         <ParticalsEffects top={1} />
         {/* <div className="contact-us-main fadeShine" /> */}
-        <section className="flex w-full items-center min-h-[80vh] justify-between overflow-x-hidden">
+        <section className="flex w-full items-center min-h-[80vh] justify-between overflow-x-hidden px-8 py-12">
           <div className="w-[45%]">
             <GradientText className="text-5xl font-bold my-5">
               How Can We Assist You Today?
@@ -47,33 +51,24 @@ const ContactUs = () => {
             <ContactUsForm />
           </div>
         </section>
-        <section className="flex flex-wrap justify-between gap-2">
-          <div className="w-[49%]">
-            <Accordian>
-              <p>Praveen</p>
-            </Accordian>
-          </div>
-          <div className="w-[48%]">
-            <Accordian>
-              <p>Praveen</p>
-            </Accordian>
-          </div>
-          <div className="w-[48%]">
-            <Accordian>
-              <p>Praveen</p>
-            </Accordian>
-          </div>
-          <div className="w-[48%]">
-            <Accordian>
-              <p>Praveen</p>
-            </Accordian>
-          </div>
-          <div className="w-[48%]">
-            <Accordian>
-              <p>Praveen</p>
-            </Accordian>
-          </div>
-        </section>
+
+
+        <div className="mb-10">
+          <StyledText element="h6" fontSize="20px" className="text-5xl font-bold px-8">
+            General Questions
+          </StyledText>
+
+          <section className="flex flex-wrap justify-between gap-4 px-8 py-6">
+            {faqData.map((faqItem, index) => (
+              <div key={index} className="w-[48%]">
+                <Accordian question={faqItem.question}>
+                  <p>{faqItem.answer}</p>
+                </Accordian>
+              </div>
+            ))}
+          </section>
+        </div>
+
       </main>
     </>
   );

@@ -103,6 +103,50 @@ const CONTENT = {
                 }
             ]
         }
+    },
+    contactUS: {
+        FAQ: [
+            {
+                "question": "What services do you offer?",
+                "answer": "We offer a comprehensive range of IT services including website development, mobile application development, UI/UX design, and more."
+            },
+            {
+                "question": "Do you provide website development services?",
+                "answer": "Yes, we specialize in custom website development tailored to meet your business needs."
+            },
+            {
+                "question": "Can you build mobile applications?",
+                "answer": "Absolutely! We develop native and cross-platform mobile applications for various operating systems."
+            },
+            {
+                "question": "How do you approach UI/UX design for projects?",
+                "answer": "Our approach to UI/UX design focuses on creating intuitive and visually appealing interfaces that enhance user experience."
+            },
+            {
+                "question": "What technologies do you specialize in?",
+                "answer": "We specialize in a wide array of technologies including but not limited to React, Angular, Node.js, Python, and more."
+            },
+            {
+                "question": "Do you offer support after project completion?",
+                "answer": "Yes, we provide ongoing maintenance and support services to ensure your project runs smoothly post-launch."
+            },
+            {
+                "question": "Can you integrate third-party APIs into projects?",
+                "answer": "Certainly! We have extensive experience in integrating various third-party APIs to enhance the functionality of your applications."
+            },
+            {
+                "question": "What is your typical project timeline?",
+                "answer": "Project timelines vary depending on the scope and complexity, but we strive to deliver projects within agreed-upon timelines."
+            },
+            {
+                "question": "How do you ensure the security of client data?",
+                "answer": "We follow industry best practices for data security, including encryption, access controls, and regular security audits."
+            },
+            {
+                "question": "Do you provide hosting solutions also?",
+                "answer": "Yes, we offer reliable hosting solutions tailored to meet the specific requirements of your websites and applications."
+            }
+        ]
     }
 }
 
